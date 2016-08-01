@@ -32,5 +32,5 @@ model.emissionprob_ = emission_probability
 # predict a sequence of hidden states based on visible states
 bob_says = np.array([[0], [2], [1], [1], [2], [0]])
 logprob, alice_hears = model.decode(bob_says, algorithm="viterbi")
-print "Bob says:   ", ", ".join([observations[x[0]] for x in bob_says])
-print "Alice hears:", ", ".join([states[x] for x in alice_hears])
+print("Bob says:    %s"%", ".join([observations[x[0]] for x in bob_says]))
+print("Alice hears: %s"%", ".join([states[x] for x in alice_hears]))
